@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from "react-redux"
+import { connect } from 'react-redux'
 
 //Components
 import { HelloWorld } from '../components/HelloWorld'
@@ -13,7 +13,7 @@ class Root extends React.Component {
     }
 
     render() {
-        const { who="" } = this.props;
+        const { who='' } = this.props;
         return (
             <div id="content">
                 <HelloWorld who={who} />

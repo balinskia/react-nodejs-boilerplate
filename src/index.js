@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider } from "react-redux"
+import { Provider } from 'react-redux'
 import thunk from 'redux-thunk';
-import createLogger from "redux-logger"
+import createLogger from 'redux-logger'
 import { createStore, applyMiddleware } from 'redux';
 
 import './styles/main.scss'
