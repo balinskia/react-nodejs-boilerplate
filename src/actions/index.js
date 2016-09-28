@@ -1,7 +1,7 @@
 import axios from "axios";
 
 function init() {
-    return {type: 'START', payload: "word"};
+    return {type: 'START', payload: "YOU!"};
 }
 
 const URL =
