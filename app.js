@@ -4,6 +4,7 @@ const app = Server.app();
 
 
 if (process.env.NODE_ENV !== 'production') {
+  console.log('Building dev');
   const webpack = require('webpack')
   const webpackDevMiddleware = require('webpack-dev-middleware')
   const webpackHotMiddleware = require('webpack-hot-middleware')
