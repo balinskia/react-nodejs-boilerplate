@@ -28,9 +28,7 @@
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "redux-thunk": "^2.1.0",
-    "webpack": "^1.12.14"
-  },
-  "devDependencies": {
+    "webpack": "^1.12.14",
     "axios": "^0.14.0",
     "babel": "^6.5.2",
     "babel-cli": "^6.6.5",
