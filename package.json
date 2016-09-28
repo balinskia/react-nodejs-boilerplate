@@ -1,0 +1,55 @@
+{
+  "name": "webpack-heroku-boilerplate",
+  "version": "1.0.0",
+  "description": "Simplest Heroku starter kit for React apps.",
+  "main": "./src/entry.js",
+  "homepage": "https://github.com/wallacyyy/webpack-heroku",
+  "author": "Leonardo Couto",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "start": "node app.js",
+    "postinstall": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wallacyyy/webpack-heroku.git"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "webpack",
+    "es2015",
+    "javascript"
+  ],
+  "dependencies": {
+    "cors": "^2.8.1",
+    "express": "^4.13.4",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "axios": "^0.14.0",
+    "babel": "^6.5.2",
+    "babel-cli": "^6.6.5",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "react-keydown": "^1.6.2",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.6.1",
+    "sass-loader": "^3.2.0",
+    "shortid": "^2.2.6",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.14",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  }
+}

@@ -1,0 +1,22 @@
+body {
+  background-color: $darkblue;
+  min-width: 400px;
+}
+
+#content {
+  z-index:0;
+  position: relative;
+  margin: 5%;
+  width: 90%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+@media screen and (min-width:700px) {
+  #content {
+    width: 660px;
+    margin: 5% auto;
+  }
+}
+
+
