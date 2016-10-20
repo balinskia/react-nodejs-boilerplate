@@ -1,5 +1,5 @@
 {
-  "name": "webpack-heroku-boilerplate",
+  "name": "react-nodejs-boilerplate",
   "version": "1.0.0",
   "description": "Simplest Heroku starter kit for React apps.",
   "main": "./src/entry.js",
