@@ -24,32 +24,32 @@
     "react"
   ],
   "rules": {
-    // Disable `no-console` rule
-    "no-console": 1,
-    // Give a warning if identifiers contain underscores
-    "no-underscore-dangle": 0,
-    // Default to single quotes and raise an error if something
-    // else is used
-    "quotes": [
-      1,
-      "single"
+    "comma-dangle": [
+      0,
+      "always-multiline"
     ],
-    "no-unused-vars": 1,
-    "no-undef": 1,
-    "no-extra-semi": 1,
-    "no-unreachable": 1,
-    "no-duplicate-case": 1,
-    "no-fallthrough": 1,
-    "no-empty": 1,
-    "no-mixed-spaces-and-tabs": 1,
-    "react/prop-types": 0,
-    "react/no-danger": 1,
-    "react/no-direct-mutation-state": 1,
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2,
-    "no-redeclare": 1,
-    "no-unexpected-multiline": 1,
-    "no-empty-pattern": 1
+    "no-underscore-dangle": 0,
+    "max-len": [
+      1,
+      180,
+      4
+    ],
+    "arrow-body-style": [
+      0
+    ],
+    "react/jsx-no-bind": [
+      0
+    ],
+    "import/no-unresolved": [
+      0
+    ],
+    // Until import plugin supports webpack 2 resolveModules,
+    "object-curly-spacing": 0,
+    "keyword-spacing": 0,
+    "no-shadow": 0,
+    "consistent-return": 0,
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "no-else-return": 0,
+    "func-names": 0
   }
 }
