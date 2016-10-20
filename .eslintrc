@@ -2,8 +2,7 @@
   // Extend existing configuration
   // from ESlint and eslint-plugin-react defaults.
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
+    "airbnb"
   ],
   // Enable ES6 support. If you want to use custom Babel
   // features, you will need to enable a custom parser
@@ -11,11 +10,14 @@
   "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "ecmaFeatures": {
     "jsx": true,
-    "modules": true
+    "modules": true,
+    "es6": true,
+    "classes": true
   },
   // Enable custom plugin known as eslint-plugin-react
   "plugins": [
