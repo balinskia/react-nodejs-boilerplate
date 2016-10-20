@@ -15,41 +15,43 @@
   },
   "ecmaFeatures": {
     "jsx": true,
-    "modules": true,
     "es6": true,
     "classes": true
   },
-  // Enable custom plugin known as eslint-plugin-react
-  "plugins": [
-    "react"
-  ],
+  // Enable custom plugins
+  "plugins": [],
   "rules": {
+    "arrow-body-style": [
+      0
+    ],
+    "arrow-parens": 0,
     "comma-dangle": [
       0,
       "always-multiline"
     ],
-    "no-underscore-dangle": 0,
+    "consistent-return": 0,
+    "func-names": 0,
+    "import/no-unresolved": [
+      0
+    ],
+    "import/prefer-default-export": 0,
+    "indent": ["error", 4, {"SwitchCase": 1}],
+    "keyword-spacing": 0,
     "max-len": [
       1,
       180,
       4
     ],
-    "arrow-body-style": [
-      0
-    ],
+    "no-else-return": 0,
+    "no-shadow": 0,
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "no-underscore-dangle": 0,
+    "object-curly-spacing": 0,
+    "react/jsx-indent": ["error", 4],
     "react/jsx-no-bind": [
       0
     ],
-    "import/no-unresolved": [
-      0
-    ],
-    // Until import plugin supports webpack 2 resolveModules,
-    "object-curly-spacing": 0,
-    "keyword-spacing": 0,
-    "no-shadow": 0,
-    "consistent-return": 0,
-    "no-use-before-define": ["error", { "functions": false, "classes": true }],
-    "no-else-return": 0,
-    "func-names": 0
+    "react/jsx-filename-extension": 0
+
   }
 }

@@ -5,10 +5,10 @@ const cors = require('cors');
 module.exports = {
   app: function () {
     const app = express()
-    const indexPath = path.join(__dirname, 'index.html')
-    const publicPath = express.static(path.join(__dirname, 'public'))
-    app.use('/public', publicPath)
-    app.get('/', function (_, res) { res.sendFile(indexPath) })
+    const indexPath = path.join(__dirname, '../client/public/index.html');
+    const publicPath = express.static(path.join(__dirname, '../client/public'));
+    app.use('/public', publicPath);
+    app.get('/', function (_, res) { res.sendFile(indexPath) });
     app.use(cors());
 
     return app

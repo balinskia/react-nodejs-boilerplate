@@ -1,12 +1,12 @@
 const reducer = (state = {}, action) => {
     switch (action.type) {
-        case 'START': {
+        case 'START':
             return {
                 who: action.payload
-            }
-        }
+            };
+        default:
+            return state;
     }
-    return state
 };
 
-export default reducer
+export default reducer;

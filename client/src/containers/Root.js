@@ -1,31 +1,39 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import {connect} from 'react-redux';
 
-//Components
-import { HelloWorld } from '../components/HelloWorld'
+// Components
+import { HelloWorld } from '../components/HelloWorld';
 
-//Actions
-import { start } from '../actions'
+// Actions
+import { start } from '../actions';
 
 class Root extends React.Component {
     componentDidMount() {
-        if (!this.props.who) this.props.start();
+        if (!this.props.who) {
+            this.props.start();
+        }
     }
 
     render() {
-        const { who='' } = this.props;
+        const {who = ''} = this.props;
         return (
             <div id="content">
                 <HelloWorld who={who} />
             </div>
-        )
+        );
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
         start: () => dispatch(start())
-    }
+    };
 }
+
+Root.propTypes = {
+    who: React.PropTypes.string,
+    start: React.PropTypes.func
+};
+
 
 export default connect(state => state, mapDispatchToProps)(Root);

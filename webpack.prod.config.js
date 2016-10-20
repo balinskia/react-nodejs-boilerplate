@@ -1,17 +1,16 @@
-const path = require('path')
-const webpack = require('webpack')
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     devtool: 'source-map',
 
     entry: [
-        './src/index'
+        './client/src/index.js'
     ],
 
     output: {
         path: path.join(__dirname, 'public'),
-        filename: 'bundle.js',
-        publicPath: '/public/'
+        filename: 'bundle.js'
     },
 
     plugins: [
@@ -34,12 +33,12 @@ module.exports = {
             {
                 test: /\.js?$/,
                 loader: 'babel',
-                include: path.join(__dirname, 'src')
+                include: path.join(__dirname, 'client/src')
             },
             {
                 test: /\.scss?$/,
                 loader: 'style!css!sass',
-                include: path.join(__dirname, 'src', 'styles')
+                include: path.join(__dirname, 'client/src', 'styles')
             },
             {
                 test: /\.png$/,

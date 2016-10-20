@@ -1,5 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-export const HelloWorld = ({who}) => (
-    <h1>Hello {who} </h1>
-);
+export function HelloWorld(props) {
+    const who = props.who;
+    return(
+        <h1>Hello {who} </h1>
+    );
+}
+
+HelloWorld.propTypes = {
+    who: React.PropTypes.string
+};
