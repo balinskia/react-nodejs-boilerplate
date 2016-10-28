@@ -2,8 +2,7 @@
   // Extend existing configuration
   // from ESlint and eslint-plugin-react defaults.
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
+    "airbnb"
   ],
   // Enable ES6 support. If you want to use custom Babel
   // features, you will need to enable a custom parser
@@ -11,43 +10,48 @@
   "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "ecmaFeatures": {
     "jsx": true,
-    "modules": true
+    "es6": true,
+    "classes": true
   },
-  // Enable custom plugin known as eslint-plugin-react
-  "plugins": [
-    "react"
-  ],
+  // Enable custom plugins
+  "plugins": [],
   "rules": {
-    // Disable `no-console` rule
-    "no-console": 1,
-    // Give a warning if identifiers contain underscores
-    "no-underscore-dangle": 0,
-    // Default to single quotes and raise an error if something
-    // else is used
-    "quotes": [
-      1,
-      "single"
+    "arrow-body-style": [
+      0
     ],
-    "no-unused-vars": 1,
-    "no-undef": 1,
-    "no-extra-semi": 1,
-    "no-unreachable": 1,
-    "no-duplicate-case": 1,
-    "no-fallthrough": 1,
-    "no-empty": 1,
-    "no-mixed-spaces-and-tabs": 1,
-    "react/prop-types": 0,
-    "react/no-danger": 1,
-    "react/no-direct-mutation-state": 1,
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2,
-    "no-redeclare": 1,
-    "no-unexpected-multiline": 1,
-    "no-empty-pattern": 1
+    "arrow-parens": 0,
+    "comma-dangle": [
+      0,
+      "always-multiline"
+    ],
+    "consistent-return": 0,
+    "func-names": 0,
+    "import/no-unresolved": [
+      0
+    ],
+    "import/prefer-default-export": 0,
+    "indent": ["error", 4, {"SwitchCase": 1}],
+    "keyword-spacing": 0,
+    "max-len": [
+      1,
+      180,
+      4
+    ],
+    "no-else-return": 0,
+    "no-shadow": 0,
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "no-underscore-dangle": 0,
+    "object-curly-spacing": 0,
+    "react/jsx-indent": ["error", 4],
+    "react/jsx-no-bind": [
+      0
+    ],
+    "react/jsx-filename-extension": 0
+
   }
 }

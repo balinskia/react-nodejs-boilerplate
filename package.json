@@ -1,15 +1,17 @@
 {
-  "name": "webpack-heroku-boilerplate",
+  "name": "react-nodejs-boilerplate",
   "version": "1.0.0",
-  "description": "Simplest Heroku starter kit for React apps.",
-  "main": "./src/entry.js",
-  "homepage": "https://github.com/wallacyyy/webpack-heroku",
-  "author": "Leonardo Couto",
+  "description": "Lightweight MERN stack boilerplate",
+  "main": "./app.js",
+  "homepage": "https://github.com/balnix/react-nodejs-boilerplate",
+  "author": "Albert Balinski, Bartlomiej Rutkowski",
   "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node app.js",
-    "postinstall": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors"
+    "start": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=development nodemon app.js",
+    "start:prod": "cross-env NODE_ENV=production node app.js",
+    "postinstall": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "lint": "eslint client server"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "cors": "^2.8.1",
+    "cross-env": "^3.1.3",
     "css-loader": "^0.23.1",
     "eslint": "^3.6.1",
     "eslint-loader": "^1.5.0",
@@ -54,5 +57,10 @@
     "webpack": "^1.12.14",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3"
   }
 }
