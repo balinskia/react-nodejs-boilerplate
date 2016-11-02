@@ -12,9 +12,9 @@
     "start:prod": "cross-env NODE_ENV=production node app.js",
     "postinstall": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
     "lint": "eslint client server",
-    "testFront": "jest client",
-    "testBack": "./node_modules/mocha/bin/mocha server --recursive",
-    "test": "npm run testFront; npm run testBack"
+    "testFront": "jest client NODE_ENV=test",
+    "testBack": "PORT=8000 MONGO_URL=mongodb://localhost:27017/test-db ./node_modules/mocha/bin/mocha server --recursive",
+    "test": "PORT=8000 MONGO_URL=mongodb://localhost:27017/test-db npm run testFront; npm run testBack"
   },
   "repository": {
     "type": "git",
