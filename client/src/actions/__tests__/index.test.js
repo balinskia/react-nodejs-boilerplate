@@ -11,7 +11,7 @@ test('Should return same object as initAction', () => {
     store.dispatch(initAction());
 
     const initActionObject = {
-        type: REDUX_CONST,
+        type: REDUX_CONST.INIT_ACTION,
         payload: 'YOU!'
     };
     const actionsAnticipated = [initActionObject];
