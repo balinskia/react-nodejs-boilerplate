@@ -11,4 +11,6 @@ app.get('/', (_, res) => {
 });
 app.use(cors());
 
-export default app;
+module.exports = {
+    app
+};

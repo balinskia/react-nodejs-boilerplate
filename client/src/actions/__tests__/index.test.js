@@ -19,3 +19,4 @@ test('Should return same object as initAction', () => {
 
     expect(actionsDispatched).toEqual(actionsAnticipated);
 });
+

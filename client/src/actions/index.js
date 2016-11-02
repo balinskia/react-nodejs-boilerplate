@@ -3,7 +3,7 @@ import REDUX_CONST from '../../constants/Redux/index';
 
 export function initAction() {
     return {
-        type: REDUX_CONST,
+        type: REDUX_CONST.INIT_ACTION,
         payload: 'YOU!'
     };
 }

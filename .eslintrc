@@ -44,6 +44,7 @@
       4
     ],
     "no-else-return": 0,
+    "no-plusplus": 0,
     "no-shadow": 0,
     "no-use-before-define": ["error", { "functions": false, "classes": true }],
     "no-underscore-dangle": 0,
