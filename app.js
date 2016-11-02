@@ -1,4 +1,5 @@
 const Server = require('./server/server.js');
+const config = require('./server/config').config;
 const app = Server.app;
 
 if (process.env.NODE_ENV !== 'production') {
@@ -16,9 +17,8 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-const port = (process.env.PORT || 8080);
-app.listen(port, (error) => {
+app.listen(config.port, (error) => {
   if (!error) {
-    console.log(`Listening at http://localhost:${port}`); // eslint-disable-line
+    console.log(`Listening at http://localhost:${config.port}`); // eslint-disable-line
   }
 });

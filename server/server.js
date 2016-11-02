@@ -1,6 +1,15 @@
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+const config = require('./config').config;
+
+mongoose.connect(config.mongoURL, (error) => {
+    if (error) {
+        console.error('Please make sure Mongodb is installed and running!'); // eslint-disable-line no-console
+        throw error;
+    }
+});
 
 const app = express();
 const indexPath = path.join(__dirname, '../client/public/index.html');
