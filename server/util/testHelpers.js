@@ -5,15 +5,11 @@ const createRandomString = (length = 8) => {
     return Math.random().toString(36).substring(length);
 };
 
-const createRandomInteger = () => {
-    const MAX = Number.POSITIVE_INFINITY;
-    const MIN = Number.NEGATIVE_INFINITY;
+const createRandomInteger = (MIN = -1000000, MAX = 1000000) => {
     return Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
 };
 
-const createRandomDouble = () => {
-    const MAX = Number.POSITIVE_INFINITY;
-    const MIN = Number.NEGATIVE_INFINITY;
+const createRandomDouble = (MIN = -1000000, MAX = 1000000) => {
     return Math.random() * (MAX - MIN) + MIN;
 };
 
