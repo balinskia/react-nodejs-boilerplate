@@ -15,7 +15,7 @@ const createRandomDouble = () => {
     const MAX = Number.POSITIVE_INFINITY;
     const MIN = Number.NEGATIVE_INFINITY;
     return Math.random() * (MAX - MIN) + MIN;
-}
+};
 
 module.exports = {
     createRandomString,
