@@ -1,5 +1,6 @@
 .idea
 old/.idea
 node_modules
-public/bundle.js
-public/bundle.js.map
+client/public/bundle.js
+client/public/bundle.js.map
+dist
