@@ -11,7 +11,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "jest": true
   },
   "ecmaFeatures": {
     "jsx": true,
@@ -31,10 +32,13 @@
     ],
     "consistent-return": 0,
     "func-names": 0,
+    "eol-last": 0,
+    "import/no-dynamic-require" : 0,
     "import/no-unresolved": [
       0
     ],
     "import/prefer-default-export": 0,
+
     "indent": ["error", 4, {"SwitchCase": 1}],
     "keyword-spacing": 0,
     "max-len": [
@@ -43,6 +47,8 @@
       4
     ],
     "no-else-return": 0,
+    "no-mixed-operators": 0,
+    "no-plusplus": 0,
     "no-shadow": 0,
     "no-use-before-define": ["error", { "functions": false, "classes": true }],
     "no-underscore-dangle": 0,

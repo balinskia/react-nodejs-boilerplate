@@ -9,7 +9,7 @@ module.exports = {
     ],
 
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'client/public'),
         filename: 'bundle.js'
     },
 
@@ -33,12 +33,16 @@ module.exports = {
             {
                 test: /\.js?$/,
                 loader: 'babel',
-                include: path.join(__dirname, 'client/src')
+                include: path.join(__dirname, 'client')
             },
             {
                 test: /\.scss?$/,
                 loader: 'style!css!sass',
                 include: path.join(__dirname, 'client/src', 'styles')
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
             },
             {
                 test: /\.png$/,

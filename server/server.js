@@ -1,16 +1,20 @@
-const path = require('path');
-const express = require('express');
-const cors = require('cors');
+import path from 'path';
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import database from './database/database';
 
-module.exports = {
-  app: function () {
-    const app = express()
-    const indexPath = path.join(__dirname, '../client/public/index.html');
-    const publicPath = express.static(path.join(__dirname, '../client/public'));
-    app.use('/public', publicPath);
-    app.get('/', function (_, res) { res.sendFile(indexPath) });
+const app = express();
+database.connect(() => {
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
     app.use(cors());
 
-    return app
-  }
-}
+    // static paths
+    const publicPath = express.static(path.join(__dirname, '../client/public'));
+    app.use(publicPath);
+});
+
+module.exports = {
+    app
+};
